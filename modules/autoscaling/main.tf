@@ -26,6 +26,10 @@ resource "aws_launch_template" "web" {
   iam_instance_profile {
     name = module.iam_instance_profile.name
   }
+
+  tags = {
+    Name = "AutoScale-CaroGame"
+  }
 }
 
 module "alb" {
